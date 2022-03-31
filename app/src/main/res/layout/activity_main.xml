@@ -34,7 +34,7 @@
             <ImageButton
                 android:id="@+id/papelbt"
                 android:layout_width="140dp"
-                android:layout_height="140"
+                android:layout_height="140dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/paper" />
 
