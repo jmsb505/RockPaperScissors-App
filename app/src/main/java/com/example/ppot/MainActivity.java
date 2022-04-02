@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View view) {
-            Integer num=rand.nextInt(2);//Del 0 al 2, 0 piedra 1 papel 2 tijera
+            Integer num=rand.nextInt(3);//Del 0 al 2, 0 piedra 1 papel 2 tijera
             if(num==0)
             {
                 //Perdida
