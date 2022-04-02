@@ -2,6 +2,7 @@ package com.example.ppot;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -132,6 +133,11 @@ public class MainActivity extends AppCompatActivity {
             piedrabt.setEnabled(true);
             tijerabt.setEnabled(true);
             papelbt.setEnabled(true);
+            imageView.setImageDrawable(null);
         }
     };
+    public void startHist(View v){
+        Intent intent = new Intent(MainActivity.this,HistActivity.class);
+        startActivity(intent);
+    }
 }

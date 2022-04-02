@@ -12,6 +12,7 @@
         tools:layout_editor_absoluteY="1dp">
 
         <ListView
+            android:id="@+id/histlist"
             android:layout_width="match_parent"
             android:layout_height="631dp" />
 
@@ -19,6 +20,7 @@
             android:id="@+id/returnbt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Return" />
+            android:text="Return"
+            android:onClick="Return"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

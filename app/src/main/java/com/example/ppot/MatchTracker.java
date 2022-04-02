@@ -1,9 +1,11 @@
 package com.example.ppot;
+import android.widget.ListView;
+
 import java.util.*;
 
 public class MatchTracker {
     private static MatchTracker instancia=new MatchTracker();
-    private List<String> roundList;
+    private ArrayList<String> roundList=new ArrayList<>();
     private Map<String,Integer> winMap;
     private Integer pcWins;
     private Integer playerWins;
@@ -84,5 +86,8 @@ public class MatchTracker {
         {
             roundList.add("Jugador empato Ronda: "+roundCounter+" usando ambos tijera.");
         }
+    }
+    public ArrayList<String>getHist(){
+    return roundList;
     }
 }
