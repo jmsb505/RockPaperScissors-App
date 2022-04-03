@@ -14,9 +14,15 @@
         tools:layout_editor_absoluteY="1dp">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageView5"
             android:layout_width="match_parent"
-            android:layout_height="299dp"
+            android:layout_height="226dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/resultImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <LinearLayout
@@ -44,11 +50,12 @@
                 android:layout_height="140dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/scissors" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
@@ -56,8 +63,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="View History"
-                android:onClick="startHist"/>
+                android:onClick="startHist"
+                android:text="View History" />
 
             <Button
                 android:id="@+id/roundbt"

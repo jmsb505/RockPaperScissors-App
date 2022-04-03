@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private ImageButton papelbt;
     private ImageButton tijerabt;
+    private ImageView resultImage;
     private Button histbt;
     private Button roundbt;
     private Random rand=new Random();
@@ -27,8 +28,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Enlace de componentes
+        resultImage=(ImageView) findViewById(R.id.resultImage);
         piedrabt=(ImageButton) findViewById(R.id.piedrabt);
-        imageView=(ImageView) findViewById(R.id.imageView);
+        imageView=(ImageView) findViewById(R.id.resultImage);
         papelbt=(ImageButton) findViewById(R.id.papelbt);
         tijerabt=(ImageButton) findViewById(R.id.tijerabt);
         histbt=(Button) findViewById(R.id.histbt);
@@ -42,12 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View view) {
-        Integer num=rand.nextInt(2);//Del 0 al 2, 0 piedra 1 papel 2 tijera
+        Integer num=rand.nextInt(3);//Del 0 al 2, 0 piedra 1 papel 2 tijera
         if(num==0)//piedra
         {
             //Empate,muestra imagen de roca de PC
             matchTracker.setRound(0,num);
             imageView.setImageResource(R.drawable.rock);
+            resultImage.setImageResource(R.drawable.threeDots);
+
 
         }
         else if(num==1)//papel
@@ -55,12 +59,14 @@ public class MainActivity extends AppCompatActivity {
             //Perdida, mostrar imagen, gana PC
             matchTracker.setRound(0,num);
             imageView.setImageResource(R.drawable.paper);
+            resultImage.setImageResource(R.drawable.youLose);
         }
         else//tijera
         {
             //Gana, mostrar imagen
             matchTracker.setRound(0,num);
             imageView.setImageResource(R.drawable.scissors);
+            resultImage.setImageResource(R.drawable.winnerDef);
         }
         piedrabt.setEnabled(false);
         tijerabt.setEnabled(false);
@@ -72,22 +78,26 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View view) {
-            Integer num=rand.nextInt(2);//Del 0 al 2, 0 piedra 1 papel 2 tijera
+            Integer num=rand.nextInt(3);//Del 0 al 2, 0 piedra 1 papel 2 tijera
             if(num==0)
             {//Jugador Gana, mostrar en imagen
                 matchTracker.setRound(1,num);
                 imageView.setImageResource(R.drawable.rock);
+                resultImage.setImageResource(R.drawable.winnerDef);
+
 
             }
             else if(num==1) {
                 matchTracker.setRound(1,num);//Empate
                 imageView.setImageResource(R.drawable.paper);
+                resultImage.setImageResource(R.drawable.threeDots);
             }
             else
             {
                 //Pierde mostrar en imagen
                 matchTracker.setRound(1,num);
                 imageView.setImageResource(R.drawable.scissors);
+                resultImage.setImageResource(R.drawable.youLose);
             }
             piedrabt.setEnabled(false);
             tijerabt.setEnabled(false);
@@ -105,18 +115,21 @@ public class MainActivity extends AppCompatActivity {
                 //Perdida
                 matchTracker.setRound(2,num);
                 imageView.setImageResource(R.drawable.rock);
+                resultImage.setImageResource(R.drawable.youLose);
             }
             else if(num==1)
             {
                 //Gana
                 matchTracker.setRound(2,num);
                 imageView.setImageResource(R.drawable.paper);
+                resultImage.setImageResource(R.drawable.winnerDef);
             }
             else
             {
                 //Empate
                 matchTracker.setRound(2,num);
                 imageView.setImageResource(R.drawable.scissors);
+                resultImage.setImageResource(R.drawable.threeDots);
             }
             piedrabt.setEnabled(false);
             tijerabt.setEnabled(false);
