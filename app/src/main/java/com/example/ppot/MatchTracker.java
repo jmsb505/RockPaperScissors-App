@@ -90,4 +90,12 @@ public class MatchTracker {
     public ArrayList<String>getHist(){
     return roundList;
     }
+
+    public Integer getPcWins() {
+        return pcWins;
+    }
+
+    public Integer getPlayerWins() {
+        return playerWins;
+    }
 }

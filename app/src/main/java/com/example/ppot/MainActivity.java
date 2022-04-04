@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             //Empate,muestra imagen de roca de PC
             matchTracker.setRound(0,num);
             imageView.setImageResource(R.drawable.rock);
-            resultImage.setImageResource(R.drawable.threeDots);
+            resultImage.setImageResource(R.drawable.threedots);
 
 
         }
@@ -59,14 +59,14 @@ public class MainActivity extends AppCompatActivity {
             //Perdida, mostrar imagen, gana PC
             matchTracker.setRound(0,num);
             imageView.setImageResource(R.drawable.paper);
-            resultImage.setImageResource(R.drawable.youLose);
+            resultImage.setImageResource(R.drawable.youlose);
         }
         else//tijera
         {
             //Gana, mostrar imagen
             matchTracker.setRound(0,num);
             imageView.setImageResource(R.drawable.scissors);
-            resultImage.setImageResource(R.drawable.winnerDef);
+            resultImage.setImageResource(R.drawable.winnerdef);
         }
         piedrabt.setEnabled(false);
         tijerabt.setEnabled(false);
@@ -83,21 +83,21 @@ public class MainActivity extends AppCompatActivity {
             {//Jugador Gana, mostrar en imagen
                 matchTracker.setRound(1,num);
                 imageView.setImageResource(R.drawable.rock);
-                resultImage.setImageResource(R.drawable.winnerDef);
+                resultImage.setImageResource(R.drawable.winnerdef);
 
 
             }
             else if(num==1) {
                 matchTracker.setRound(1,num);//Empate
                 imageView.setImageResource(R.drawable.paper);
-                resultImage.setImageResource(R.drawable.threeDots);
+                resultImage.setImageResource(R.drawable.threedots);
             }
             else
             {
                 //Pierde mostrar en imagen
                 matchTracker.setRound(1,num);
                 imageView.setImageResource(R.drawable.scissors);
-                resultImage.setImageResource(R.drawable.youLose);
+                resultImage.setImageResource(R.drawable.youlose);
             }
             piedrabt.setEnabled(false);
             tijerabt.setEnabled(false);
@@ -115,21 +115,21 @@ public class MainActivity extends AppCompatActivity {
                 //Perdida
                 matchTracker.setRound(2,num);
                 imageView.setImageResource(R.drawable.rock);
-                resultImage.setImageResource(R.drawable.youLose);
+                resultImage.setImageResource(R.drawable.youlose);
             }
             else if(num==1)
             {
                 //Gana
                 matchTracker.setRound(2,num);
                 imageView.setImageResource(R.drawable.paper);
-                resultImage.setImageResource(R.drawable.winnerDef);
+                resultImage.setImageResource(R.drawable.winnerdef);
             }
             else
             {
                 //Empate
                 matchTracker.setRound(2,num);
                 imageView.setImageResource(R.drawable.scissors);
-                resultImage.setImageResource(R.drawable.threeDots);
+                resultImage.setImageResource(R.drawable.threedots);
             }
             piedrabt.setEnabled(false);
             tijerabt.setEnabled(false);
