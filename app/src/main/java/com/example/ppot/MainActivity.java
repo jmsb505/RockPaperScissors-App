@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         //Enlace de componentes
         resultImage=(ImageView) findViewById(R.id.resultImage);
         piedrabt=(ImageButton) findViewById(R.id.piedrabt);
-        imageView=(ImageView) findViewById(R.id.resultImage);
+        imageView=(ImageView) findViewById(R.id.imageView5);
         papelbt=(ImageButton) findViewById(R.id.papelbt);
         tijerabt=(ImageButton) findViewById(R.id.tijerabt);
         histbt=(Button) findViewById(R.id.histbt);
