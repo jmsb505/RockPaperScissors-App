@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
             tijerabt.setEnabled(true);
             papelbt.setEnabled(true);
             imageView.setImageDrawable(null);
+            resultImage.setImageDrawable(null);
         }
     };
     public void startHist(View v){
